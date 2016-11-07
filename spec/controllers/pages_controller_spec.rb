@@ -4,7 +4,7 @@ describe PagesController do
 	describe "GET #index" do
 		# it "is order by date" do
 		# 	get :index, id: @order
-		# 	expect(response).to match(/order_by=date/)
+		# 	expect(current_path).to match(/order_by=date/)
 		# end
 	end
 
