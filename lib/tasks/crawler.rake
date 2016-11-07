@@ -1,6 +1,6 @@
 namespace :crawler do
   desc 'TODO'
-  task film: :environment do
+  task film: :environment do      # run this task by typing "rake crawler:film" in command line.
     Film = Class.new(ActiveRecord::Base)
     agent = Mechanize.new
     page = agent.get('https://movie.douban.com/tag/2016')
