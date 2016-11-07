@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: "1"
+  hashed_password: "731f63b0b212c5737312ae4b8c103fed05bb5ee27af1b9acf260896f2d427a97"
+  salt: "6h7a60ov2spa6mgr5fb7"
+
+two:
+  username: MyString
+  hashed_password: MyString
+  salt: MyString

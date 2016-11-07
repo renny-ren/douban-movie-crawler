@@ -1,0 +1,10 @@
+<h1>Sign up</h1>
+<%= flash[:error] %>
+
+<%= form_for @user, url: :applicants do |f| %>
+	<%= f.label "Username:" %>
+	<%= f.text_field :username %>
+	<%= f.label "Password:" %>
+	<%= f.password_field :password %>
+	<%= f.submit "Signup" %>
+<% end %>

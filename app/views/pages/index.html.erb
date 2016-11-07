@@ -1,0 +1,30 @@
+<div style="text-align:center">
+	<h1 style="color:red">MOVIE</h1>
+
+	<%= link_to "按时间排序", pages_url(order_by: :date) %>
+	<%= link_to "按评分排序", pages_path(order_by: :rate ) %>
+
+	<div class='films' >
+		<table style="margin: 0 auto">
+			<tr>
+        <th>Name</th>
+        <th>category</th>
+        <th>date</th>
+        <th>rate</th>			
+			</tr>
+
+			<% @films.each do |film| %>
+				<tr>
+					<td><%= film.name %></td>
+					<td><%= film.category %></td>
+					<td><%= film.date %></td>
+					<td><%= film.rate %></td>			
+					<td><%= link_to "delete", pages_path(id: film.id), method: :delete, data: { confirm: 'Are You Sure?' } if session[:admin] %></td>
+		 	</tr>		
+			<%end%>
+		</table>
+		<%= will_paginate @films %>
+	</div>
+
+	<%= link_to "Log out", sessions_path, method: :delete %>
+</div>
